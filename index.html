@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pete's Pizza Delivery - Online Order Form</title>
+    <style>
+        body {
+            background-image: url(piz.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: white;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        .form-group {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .options {
+            padding-left: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .submit-btn {
+            size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pete's Pizza Delivery</h1>
+    <h2>Online Order Form</h2>
+    <form style="background-color: aliceblue;">
+        <div class="form-group">
+            <div>
+                <label for="name">*Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="tel">*Tel:</label>
+                <input type="tel" id="tel" name="tel" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                <label for="address">*Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div>
+                <label for="email">*Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                <label for="town">*Town/city:</label>
+                <input type="text" id="town" name="town" required>
+            </div>
+            <div>
+                <label for="postcode">*Postcode:</label>
+                <input type="text" id="postcode" name="postcode" required>
+            </div>
+        </div>
+        <small style="padding-left: 10px;">* required fields</small>
+        <div class="options">
+            <div >
+                <h3>Topping</h3>
+                <label><input type="radio" name="topping" value="margherita"> Margherita</label><br>
+                <label><input type="radio" name="topping" value="four-seasons"> Four Seasons</label><br>
+                <label><input type="radio" name="topping" value="meat-feast"> Meat Feast</label>
+            </div>
+            <div>
+                <h3>Size</h3>
+                <label><input type="radio" name="size" value="small"> Small</label><br>
+                <label><input type="radio" name="size" value="medium"> Medium</label><br>
+                <label><input type="radio" name="size" value="large"> Large</label>
+            </div>
+            <div>
+                <h3>Extras</h3>
+                <label><input type="checkbox" name="extras" value="mushrooms"> Mushrooms</label><br>
+                <label><input type="checkbox" name="extras" value="green-peppers"> Green peppers</label><br>
+                <label><input type="checkbox" name="extras" value="anchovies"> Anchovies</label><br>
+                <label><input type="checkbox" name="extras" value="extra-cheese"> Extra cheese</label>
+            </div>
+        </div>
+        <div style="padding-left: 10px;">
+            <label for="delivery-time">Preferred delivery time:</label>
+            <input type="time" id="delivery-time" name="delivery-time">
+        </div>
+        <div style="padding-left: 10px; padding-right: 10px;">
+            <label for="instructions">Delivery instructions:</label>
+            <textarea id="instructions" name="instructions" rows="3"></textarea>
+        </div>
+        <div style="padding-bottom: 20px;">
+            <center><button type="submit" class="submit-btn" style="width: 100px; height: 40px;">Submit order</button></center>
+        </div>
+    </form>
+</body>
+</html>
